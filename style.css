@@ -159,14 +159,27 @@ nav>a {
     text-align: center;
 }
 
+/* Form */
+.message-section {
+    display: flex;
+    justify-content: flex-start;
+}
+
+form>div {
+    display: grid;
+    margin-right: 100px;
+}
+
 /* Contact */
 #section-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #161D6F;
     color: #FFFF;
     border-radius: 5px;
-    text-align: center;
     padding: 10px;
-    margin: 10px 70px;
+    margin: 10px;
 }
 
 .kontak {
@@ -221,6 +234,14 @@ footer > p {
 
     #section-khasiat, #section-testi {
         display: grid;
+    }
+
+    #section-contact {
+        flex-direction: column;
+    }
+
+    .message-section {
+        margin-bottom: 20px;
     }
 
 }
