@@ -1,7 +1,7 @@
 
 body {
     font-family: math;
-    font-size: 20px;
+    font-size: 18px;
     background-color: #BFD8AF;
 }
 
@@ -17,7 +17,7 @@ body {
 .logo-icon {
     height: 100px;
     width: 150px;
-    background-image: url(../img/HNI-logo.png);
+    background-image: url(img/HNI-logo.png);
     background-size: cover;
     background-position: center;
 }
@@ -44,7 +44,7 @@ nav>a {
 }
 
 #beranda>img {
-    width: 700px;
+    width: 100%;
     margin-right: 10px;
 }
 
@@ -52,6 +52,7 @@ nav>a {
     font-size: xx-large;
     font-weight: bold;
     color: #387F49;
+    text-align: center;
 }
 
 /* Profil */
@@ -78,6 +79,7 @@ nav>a {
 #section-produk-unggul{
     background-color: #FFFF;
     text-align: center;
+    border-radius: 5px;
 }
 
 #section-produk-unggul h2 {
@@ -105,13 +107,14 @@ nav>a {
 /* Daftar Produk */
 .produk-list {
     display: flex;
+    justify-content: space-around;
 }
 
 .produk-item {
     background-color: #88D66C;
-    padding: 20px;
-    margin: 15px;
-    width: 250px;
+    padding: 25px;
+    margin: 10px;
+    width: 80%;
     border-radius: 10px;
     box-shadow: 0 4px 6px #0001;
     text-align: center;
@@ -119,8 +122,6 @@ nav>a {
 
 .produk-item > img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
 }
 
 .beli {
@@ -131,6 +132,48 @@ nav>a {
     border-radius: 5px;
 }
 
+/* Khasiat */
+#section-khasiat {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #88D66C;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 15px;
+}
+
+#section-khasiat h2 {
+    text-align: center;
+    color: #161D6F;
+}
+
+/* Testimoni */
+#section-testi {
+    background-color: #78B7D2;
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Contact */
+#section-contact {
+    background-color: #161D6F;
+    color: #FFFF;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 70px;
+}
+
+.kontak {
+    text-decoration: none;
+    color: #FFFF;
+}
+
 /* Footer */
 #copy {
     background-color: #FFFF;
@@ -138,24 +181,47 @@ nav>a {
 
 footer > p {
     text-align: right;
-    font-size: small;
+    font-size: x-small;
     padding: 10px;
 }
 
 /* Responsif */
-@media (max-width: 768px) {
-    .nav>a {
-        display: block;
-        text-align: center;
+@media only screen and (max-width: 980px) {
+    .logo-icon {
+        width: 250px;
+        height: 200px;
     }
 
     .produk-list {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    .produk-item {width: 50%;}
+
+    .produk-item > img {
+        width: 80%;
+    }
+
+    .produk-item > h3{
+        font-size: 28px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: end;
+    }
+
+    .beranda, .profil-logo, #produk1 {
+        display: contents;
+    }
+    .beranda, .contact {text-align: center;}
+
+    .logo, .logo2 {align-items: center;}
+
+    #section-khasiat, #section-testi {
+        display: grid;
+    }
+
 }
 
-@media screen {
-    
-}
