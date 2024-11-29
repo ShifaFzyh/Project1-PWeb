@@ -190,12 +190,23 @@ form>div {
 /* Footer */
 #copy {
     background-color: #FFFF;
+    display: flex;
+    justify-content: center;
 }
 
-footer > p {
-    text-align: right;
-    font-size: x-small;
+.footer > p {
+    font-size: small;
     padding: 10px;
+}
+
+.myFoto {
+    width: 150px;
+    border-radius: 70%;
+}
+
+.fa-brands {
+    font-size: 30px;
+    color: #000000
 }
 
 /* Responsif */
@@ -242,6 +253,10 @@ footer > p {
 
     .message-section {
         margin-bottom: 20px;
+    }
+
+    #copy {
+        font-size: 50px;
     }
 
 }
